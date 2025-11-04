@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 WORKDIR /app
 RUN apt update \
-    && apt install -y --no-install-recommends git racket ca-certificates curl sqlite3 \
+    && apt install -y --no-install-recommends git racket ca-certificates curl sqlite3 libfontconfig1 libcairo2 libjpeg62-turbo libglib2.0-0 libpango-1.0-0 libpangocairo-1.0-0 \
     && apt autoclean -y \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
